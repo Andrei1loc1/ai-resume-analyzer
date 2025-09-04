@@ -5,7 +5,7 @@ import {useNavigate} from "react-router";
 import {convertPdfToImage} from "~/lib/pdf2img";
 import {generateUUID} from "~/lib/utils";
 import {prepareInstructions} from "../../constants";
-import NavBar from "~/components/NavBar";
+import NavBar from '~/components/NavBar';
 
 const Upload = () => {
     const { auth, isLoading, fs, ai, kv } = usePuterStore();
@@ -27,7 +27,7 @@ const Upload = () => {
 
         setStatusText('Converting to image...');
         const imageFile = await convertPdfToImage(file);
-        if(!imageFile.file) return setStatusText('Error: Failed to convert PDF to image');
+        if(!imageFile.file) return setStatusText(`Error: ${imageFile.error || 'Failed to convert PDF to image'}`);
 
         setStatusText('Uploading the image...');
         const uploadedImage = await fs.upload([imageFile.file]);
@@ -60,6 +60,7 @@ const Upload = () => {
         await kv.set(`resume:${uuid}`, JSON.stringify(data));
         setStatusText('Analysis complete, redirecting...');
         console.log(data);
+        navigate(`/resume/${uuid}`);
     }
 
     const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
