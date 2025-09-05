@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2006e749-d975-4b0c-82a4-9b9d7a9f49b6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/routes/wipe.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-router.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/react-router.config.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,7 +74,8 @@
       <workItem from="1756888471759" duration="12210000" />
       <workItem from="1756974851927" duration="15000" />
       <workItem from="1756976094952" duration="8000" />
-      <workItem from="1756976501894" duration="6809000" />
+      <workItem from="1756976501894" duration="7935000" />
+      <workItem from="1757066162384" duration="57000" />
     </task>
     <servers />
   </component>
